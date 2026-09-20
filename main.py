@@ -1,6 +1,13 @@
 import asyncio
 import logging
+import os
 import sys
+from pathlib import Path
+
+# Ensure project root directory is in sys.path
+BASE_DIR = Path(__file__).resolve().parent
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
 
 from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
