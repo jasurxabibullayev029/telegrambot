@@ -18,7 +18,16 @@ GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
 ADMIN_ID = int(os.getenv("ADMIN_ID", "1209491758"))
 ADMIN_USERNAME = os.getenv("ADMIN_USERNAME", "KHJ701")
 
+DB_TYPE = os.getenv("DB_TYPE", "sqlite").lower()
 DATABASE_PATH = DATA_DIR / "bot.db"
+
+POSTGRES_HOST = os.getenv("POSTGRES_HOST", "localhost")
+POSTGRES_PORT = int(os.getenv("POSTGRES_PORT", "5432"))
+POSTGRES_DB = os.getenv("POSTGRES_DB", "prezent7ai")
+POSTGRES_USER = os.getenv("POSTGRES_USER", "postgres")
+POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD", "postgres")
+DATABASE_URL = os.getenv("DATABASE_URL", "")
+
 PRESENTATIONS_DIR = DATA_DIR / "presentations"
 PRESENTATIONS_DIR.mkdir(exist_ok=True)
 
