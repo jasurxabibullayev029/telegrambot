@@ -1,6 +1,42 @@
+# Environment variables / Secrets
 .env
+.env.local
+*.env
+
+# Database & local data
+*.db
+*.sqlite
+*.sqlite3
+data/*.db
+data/presentations/*
+!data/presentations/.gitkeep
+data/temp_images/*
+!data/temp_images/.gitkeep
+
+# Temporary files & test outputs
+temp_test_images/
+
+# Python bytecode & cache
 __pycache__/
-*.pyc
-data/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual Environments
 .venv/
 venv/
+ENV/
+env/
+
+# IDE / Editor folders
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS metadata
+Thumbs.db
+Desktop.ini
+.DS_Store
